@@ -35,11 +35,17 @@ public class AppFolders {
 		}
 
 		System.out.println("_________________");
-		
+
 		boolean success = new File(strPath + "\\dirTest2").mkdir();
 		System.out.println("Directory created successfully: " + success);
-		
-		
+
+		System.out.print("Enter a file path: ");
+		strPath = sc.nextLine();
+		File file = new File(strPath);
+		System.out.println("File name: " + file.getName());
+		System.out.println("File directory (Parent): " + file.getParent());
+		System.out.println("File directory (Parent): " + file.getPath());
+
 		scString.close();
 		sc.close();
 	}
